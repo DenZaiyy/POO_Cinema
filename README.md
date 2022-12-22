@@ -16,20 +16,20 @@ Pour cet exercice, il m'a été demander de faire plusieurs fonctions permettant
 
 ## Liste des acteurs ayant incarné un rôle
 
-![Liste des acteurs ayant incarné un rôle](https://imgur.com/a/IjENn8t)
+![Liste des acteurs ayant incarné un rôle](assets/images/acteurs_role.png)
 
 ## Le casting d'un film
 
-![Le casting d'un film](https://imgur.com/a/7d7ZC32)
+![Le casting d'un film](assets/images/casting_film.png)
 
 ## Liste des films par genre
 
-![Liste des films par genre](https://imgur.com/a/iWTjQAj)
+![Liste des films par genre](assets/images/genre_films.png)
 
 ## Filmographie d'un acteur
 
-![Filmographie d'un acteur](https://imgur.com/a/hn5W9U2)
+![Filmographie d'un acteur](assets/images/filmographie_acteur.png)
 
 ## Filmographie d'un réalisateur
 
-![Filmographie d'un réalisateur](https://imgur.com/a/SBOdVNt)
+![Filmographie d'un réalisateur](assets/images/filmographie_realisateur.png)
