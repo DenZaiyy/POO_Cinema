@@ -1,6 +1,6 @@
 <?php
 
-class Casting 
+class Casting
 {
 
     private Role $_role;
@@ -10,12 +10,11 @@ class Casting
     public function __construct(Film $film, Acteur $acteur, Role $role)
     {
         $this->_role = $role;
-        $role->addCasting($this);
+        $role->addCasting($this); //Ajoute le role dans le casting
         $this->_film = $film;
-        $film->addCasting($this);
+        $film->addCasting($this); //Ajoute le film dans le casting
         $this->_acteur = $acteur;
-        $acteur->addFilms($film);
-        $acteur->addCasting($this);
+        $acteur->addCasting($this); //Ajoute l'acteur dans le casting
     }
 
     public function setFilm($film)
@@ -46,11 +45,5 @@ class Casting
     public function getRole()
     {
         return $this->_role;
-    }
-
-    public function afficherCasting()
-    {
-        echo "<h4>Casting</h4>";
-        echo "Film : " . $this->getFilm() . '<br>Acteur : ' . $this->getActeur() . '<br>Role : ' . $this->getRole();
     }
 }

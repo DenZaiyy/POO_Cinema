@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Realisateur extends Personne
 {
@@ -16,12 +16,12 @@ class Realisateur extends Personne
         $this->_filmographie[] = $film;
     }
 
+    //Fonction qui va afficher la filmographie du réalisateur
     public function afficherFilmographie()
     {
         echo "<div><h4>Filmographie du realisateur : " . $this->getPrenom() . " " . strtoupper($this->getNom()) . '</h4>';
-        foreach($this->_filmographie as $film) 
-        {
-            echo "<div>" . $film . "</div>";
+        foreach ($this->_filmographie as $film) {
+            echo "<div>" . $film->afficherFilmographie() . "</div>"; //$film->afficherFilmographie() correspond à la fonction afficherFilmographie dans la class Film
         }
         echo "</div>";
     }
