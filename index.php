@@ -8,9 +8,9 @@ require 'class/Casting.php';
 require 'class/Role.php';
 
 //Les différents réalisateur de film
-$real1 = new Realisateur("Ladjy", "Ly", "H", "03-01-1978"); //réalisateur du film "les misérables"
-$real2 = new Realisateur("Darabont", "Frank", "H", "28-01-1959"); //réalisateur du film "ligne verte"
-$real3 = new Realisateur("Fuqua", "Antoine", "H", "19-01-1966");  //réalisateur du film "
+$real1 = new Realisateur("Ladjy", "Ly", "H", "03-01-1978"); //réalisateur du film "Les Misérables"
+$real2 = new Realisateur("Darabont", "Frank", "H", "28-01-1959"); //réalisateur du film "La Ligne verte"
+$real3 = new Realisateur("Fuqua", "Antoine", "H", "19-01-1966");  //réalisateur du film "Un tueur pour cible", "Le Roi Arthur"
 $real4 = new Realisateur("Burton", "Tim", "H", "25-08-1958");  //réalisateur du film "Batman(1989)", "Batman, le défi"
 $real5 = new Realisateur("Nolan", "Christopher", "H", "30-07-1970");  //réalisateur du film "Batman begins"
 
