@@ -8,6 +8,7 @@ class Personne
     private Film $_film;
     private Genre $_genre;
 
+    //Methode magique construct pour instancier une nouvelle "Personne"
     public function __construct($nom, $prenom, $sexe, $dateNaissance)
     {
         $this->_nom = $nom;
@@ -16,6 +17,7 @@ class Personne
         $this->_dateNaissance = $dateNaissance;
     }
 
+    //DEBUT - Setter / Getter pour le construct de la classe Personne
     public function setNom($nom)
     {
         $this->_nom = $nom;
@@ -61,4 +63,5 @@ class Personne
     {
         return $this->_dateNaissance;
     }
+    //FIN - Setter / Getter pour le construct de la classe Personne
 }

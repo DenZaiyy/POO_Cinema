@@ -6,9 +6,10 @@ class Acteur extends Personne
     private Role $_role;
     private array $_castings;
 
+    //Methode magique qui va permettre d'instancier un nouvel acteur à l'aide de la classe "Acteur" qui est l'extension de la classe "Personne"
     public function __construct($nom, $prenom, $sexe, $dateNaissance, Film $film, Role $role)
     {
-        parent::__construct($nom, $prenom, $sexe, $dateNaissance);
+        parent::__construct($nom, $prenom, $sexe, $dateNaissance); //Reprend les élements du construct parent (de la classe personne)
         $this->_film = $film;
         $this->_role = $role;
         $role->addActeur($this); //ajout du rôle à l'acteur
@@ -16,6 +17,7 @@ class Acteur extends Personne
         $this->_castings = [];
     }
 
+    //DEBUT - Setter Getter de la classe Acteur
     public function setFilm($film)
     {
         $this->_film = $film;
@@ -35,7 +37,9 @@ class Acteur extends Personne
     {
         return $this->_role;
     }
+    //FIN - Setter Getter de la classe Acteur
 
+    //Function addCasting qui permet d'ajouter les acteurs dans le tableau (casting) 
     public function addCasting(Casting $casting)
     {
         $this->_castings[] = $casting;
@@ -51,6 +55,7 @@ class Acteur extends Personne
         echo "</div>";
     }
 
+    //Function magique tostring qui sera l'élement renvoyer par défaut
     public function __toString()
     {
         return $this->getPrenom() . ' ' . strtoupper($this->getNom());

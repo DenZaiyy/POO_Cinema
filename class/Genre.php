@@ -5,12 +5,14 @@ class Genre
     private string $_genre;
     private array $_cinematographie;
 
+    //Methode magique construct pour instancier un nouveau "Genre" de film
     public function __construct($genre)
     {
         $this->_genre = $genre;
         $this->_cinematographie = [];
     }
 
+    //Function qui va ajouter le film au genre actuel
     public function addFilms(Film $film)
     {
         $this->_cinematographie[] = $film;
@@ -37,6 +39,7 @@ class Genre
         }
     }
 
+    //DEBUT - Setter / Getter de la classe Genre
     public function setGenre($genre)
     {
         $this->_genre = $genre;
@@ -46,7 +49,9 @@ class Genre
     {
         return $this->_genre;
     }
+    //FIN - Setter / Getter de la classe Genre
 
+    //Methode magique qui renverra par défaut le genre
     public function __toString()
     {
         return $this->getGenre();

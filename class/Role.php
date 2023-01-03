@@ -6,6 +6,7 @@ class Role
     private array $_castings;
     private array $_acteurs;
 
+    //Methode magique qui va permettre d'instancier un nouveau role de film
     public function __construct($role)
     {
         $this->_role = $role;
@@ -13,11 +14,13 @@ class Role
         $this->_acteurs = [];
     }
 
+    //Function qui va permettre d'ajouter le role dans le casting
     public function addCasting(Casting $casting)
     {
         $this->_castings[] = $casting;
     }
 
+    //Function qui va permettre d'ajouter le role à l'acteur
     public function addActeur(Acteur $acteur)
     {
         $this->_acteurs[] = $acteur;
@@ -28,12 +31,15 @@ class Role
     {
         echo "<div>";
         echo 'Les acteurs ayant joué le rôle de "' . $this->getRole() . '" sont : ';
+        echo "<ul>";
         foreach ($this->_acteurs as $acteur) {
-            echo " " . $acteur . ",";
+            echo "<li>" . $acteur . "</li>";
         }
+        echo "</ul>";
         echo "</div>";
     }
 
+    //DEBUT - Setter / Getter de la classe Role
     public function setRole($role)
     {
         $this->_role = $role;
@@ -43,7 +49,9 @@ class Role
     {
         return $this->_role;
     }
+    //FIN - Setter / Getter de la classe Role
 
+    //Methode magique qui va renvoyer par défaut la valeur du ROLE
     public function __toString()
     {
         return $this->getRole();

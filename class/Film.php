@@ -9,6 +9,7 @@ class Film
     private Genre $_genre;
     private array $_castings;
 
+    //Methode magique qui va permettre d'instancier un nouveau film à l'aide des infos demander dans le construct (title, date, ect...)
     public function __construct($title, $date, $duree, Realisateur $realisateur, Genre $genre)
     {
         $this->_title = $title;
@@ -22,6 +23,7 @@ class Film
         $this->_castings = [];
     }
 
+    //DEBUT - Setter / Getter de la classe Film
     public function setTitle($title)
     {
         $this->_title = $title;
@@ -71,6 +73,7 @@ class Film
     {
         return $this->_genre;
     }
+    //FIN - Setter / Getter de la classe Film
 
     //fonction qui va ajouter le film dans le casting
     public function addCasting(Casting $casting)
@@ -101,6 +104,7 @@ class Film
         return $dateFormat->format($time);
     }
 
+    //Methodes magique qui renverra par défaut le titre du film
     public function __toString()
     {
         return $this->getTitle();

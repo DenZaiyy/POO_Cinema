@@ -7,6 +7,19 @@ require 'class/Film.php';
 require 'class/Casting.php';
 require 'class/Role.php';
 
+/*
+Qu'est ce require ou include en PHP?
+- require est un appel à un fichier obligatoire pour permettre le fonctionne de la page (si un require n'est pas chargé, la page renverra une erreur fatale)
+- include est un appel à un fichier qui permet d'être utiliser en cas de besoin (si un include n'est pas chargé, la page renverra un warning et continuera son exécution)
+*/
+
+/* Définition d'un objet :
+Classe : 
+- La classe permet de gérer différents etats et comportements (propriétés et méthodes)
+- La classe sert à instancier un nouvel objet
+- Principe d'ecapsulation (Visibilité : public, private, protected) avant la methode magique __construct
+*/
+
 /**
  * balise <pre> sert à formater le print_r en format code (pour meilleure visibilité)
  * echo "<pre>";

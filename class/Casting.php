@@ -7,6 +7,7 @@ class Casting
     private Film $_film;
     private Acteur $_acteur;
 
+    //Methode magique qui va permettre d'instancier un nouveau casting de film en prenant en compte les paramètre (film, acteur et role)
     public function __construct(Film $film, Acteur $acteur, Role $role)
     {
         $this->_role = $role;
@@ -17,6 +18,7 @@ class Casting
         $acteur->addCasting($this); //Ajoute l'acteur dans le casting
     }
 
+    //DEBUT - Setter / getter de la classe Casting
     public function setFilm($film)
     {
         $this->_film = $film;
@@ -46,4 +48,5 @@ class Casting
     {
         return $this->_role;
     }
+    //FIN - Setter / getter de la classe Casting
 }
