@@ -29,14 +29,11 @@ class Role
     //Fonction qui va afficher les acteurs ayant jouer un rôle précis
     public function afficherActeurs()
     {
-        echo "<div>";
-        echo 'Les acteurs ayant joué le rôle de "' . $this->getRole() . '" sont : ';
         echo "<ul>";
         foreach ($this->_acteurs as $acteur) {
             echo "<li>" . $acteur . "</li>";
         }
         echo "</ul>";
-        echo "</div>";
     }
 
     //DEBUT - Setter / Getter de la classe Role

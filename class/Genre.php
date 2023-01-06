@@ -21,12 +21,11 @@ class Genre
     //Fonction qui va afficher la cinématographie d'un genre (indiquant les films qui ont le même genre de film)
     public function afficherCinematographie()
     {
-        echo "<div>";
-        echo 'Le genre "' . $this->getGenre() . '" est associé à ' . count($this->_cinematographie) . $this->checkNbFilms();
+        echo "<ul>";
         foreach ($this->_cinematographie as $genre) {
-            echo " " . $genre . ",";
+            echo "<li>" . $genre . "</li>";
         }
-        echo "</div>";
+        echo "</ul>";
     }
 
     //fonction qui permet de vérifier combien de film sont dans le genre sélectionner

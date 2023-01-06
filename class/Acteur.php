@@ -48,11 +48,9 @@ class Acteur extends Personne
     //fonction qui va afficher la filmographie d'un acteur 
     public function afficherFilmographie()
     {
-        echo "<div><h4>Filmographie de l'acteur : " . $this->getPrenom() . " " . strtoupper($this->getNom()) . '</h4>';
         foreach ($this->_castings as $casting) {
             echo "<div>Film: " . $casting->getFilm() . ' (Rôle: ' . $casting->getRole() . ')' . "</div>"; //on récupère les infos du film ainsi que le rôle depuis le casting
         }
-        echo "</div>";
     }
 
     //Function magique tostring qui sera l'élement renvoyer par défaut

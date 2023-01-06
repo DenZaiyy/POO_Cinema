@@ -21,7 +21,7 @@ class Realisateur extends Personne
     //Fonction qui va afficher la filmographie du réalisateur
     public function afficherFilmographie()
     {
-        echo "<div><h4>Filmographie du realisateur : " . $this->getPrenom() . " " . strtoupper($this->getNom()) . '</h4>';
+        echo "<div>";
         foreach ($this->_filmographie as $film) {
             echo "<div>" . $film->afficherFilmographie() . "</div>"; //$film->afficherFilmographie() correspond à la fonction afficherFilmographie dans la class Film
         }

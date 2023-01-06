@@ -85,7 +85,7 @@ $cast12 = new Casting($film5, $act11, $role10);
     <title>Cinéma</title>
 </head>
 
-<body>
+<body class="bg-dark text-light">
     <style>
         * {
             margin: 0;
@@ -98,45 +98,156 @@ $cast12 = new Casting($film5, $act11, $role10);
             padding: 0;
         }
     </style>
-    <div class="container text-center">
-        <div class="row">
-            <div class="w-100"><br></div>
-            <div class="col-12 col-sm-6 border border-primary">
-                <?php echo $real4->afficherFilmographie(); ?>
+    <div class="container w-50 p-3">
+        <h2>Filmographie de Réalisateur</h2>
+        <div class="accordion" id="accordionRealisateur">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingRealOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#RealOne" aria-expanded="false" aria-controls="RealOne">
+                        Filmographie du réalisateur #<?php echo $real4->getPrenom() . " " . strtoupper($real4->getNom()); ?>
+                    </button>
+                </h2>
+                <div id="RealOne" class="accordion-collapse collapse" aria-labelledby="headingRealOne" data-bs-parent="#accordionRealisateur">
+                    <div class="accordion-body">
+                        <?php echo $real4->afficherFilmographie(); ?>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-sm-6 border border-primary">
-                <?php echo $real3->afficherFilmographie(); ?>
-            </div>
-            <div class="w-100"><br></div>
-            <div class="col-12 col-sm-6 border border-secondary">
-                <?php echo $act9->afficherFilmographie(); ?>
-            </div>
-            <div class="col-12 col-sm-6 border border-secondary">
-                <?php echo $act3->afficherFilmographie(); ?>
-            </div>
-            <div class="w-100"><br></div>
-            <div class="col-12 col-sm-6 border border-success">
-                <?php echo $role9->afficherActeurs(); ?>
-            </div>
-            <div class="col-12 col-sm-6 border border-success">
-                <?php echo $role2->afficherActeurs(); ?>
-            </div>
-            <div class="w-100"><br></div>
-            <div class="col-12 col-sm-6 border border-danger">
-                <?php echo $genre7->afficherCinematographie(); ?>
-            </div>
-            <div class="col-12 col-sm-6 border border-danger">
-                <?php echo $genre4->afficherCinematographie(); ?>
-            </div>
-            <div class="w-100"><br></div>
-            <div class="col-12 col-sm-6 border border-warning">
-                <?php echo $film5->afficherCasting(); ?>
-            </div>
-            <div class="col-12 col-sm-6 border border-warning">
-                <?php echo $film2->afficherCasting(); ?>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingRealTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#RealTwo" aria-expanded="false" aria-controls="RealTwo">
+                        Filmographie du réalisateur #<?php echo $real3->getPrenom() . " " . strtoupper($real3->getNom()); ?>
+                    </button>
+                </h2>
+                <div id="RealTwo" class="accordion-collapse collapse" aria-labelledby="headingRealTwo" data-bs-parent="#accordionRealisateur">
+                    <div class="accordion-body">
+                        <?php echo $real3->afficherFilmographie(); ?>
+                    </div>
+                </div>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </div>
+    <div class="w-100"><br></div>
+    <div class="container w-50 p-3">
+        <h2>Filmographie d'acteur</h2>
+        <div class="accordion" id="accordionActeur">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingActeurOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ActeurOne" aria-expanded="false" aria-controls="ActeurOne">
+                        Filmographie de l'acteur #<?php echo $act9->getPrenom() . " " . strtoupper($act9->getNom()); ?>
+                    </button>
+                </h2>
+                <div id="ActeurOne" class="accordion-collapse collapse" aria-labelledby="headingActeurOne" data-bs-parent="#accordionActeur">
+                    <div class="accordion-body">
+                        <?php echo $act9->afficherFilmographie(); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingActeurTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ActeurTwo" aria-expanded="false" aria-controls="ActeurTwo">
+                        Filmographie de l'acteur #<?php echo $act3->getPrenom() . " " . strtoupper($act3->getNom()); ?>
+                    </button>
+                </h2>
+                <div id="ActeurTwo" class="accordion-collapse collapse" aria-labelledby="headingActeurTwo" data-bs-parent="#accordionActeur">
+                    <div class="accordion-body">
+                        <?php echo $act3->afficherFilmographie(); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-100"><br></div>
+    <div class="container w-50 p-3">
+        <h2>Rôle jouer par acteur</h2>
+        <div class="accordion" id="accordionRoleActeur">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingRoleActeurOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#RoleActeurOne" aria-expanded="false" aria-controls="RoleActeurOne">
+                        Rôle #<?php echo $role9; ?> jouer par les acteurs
+                    </button>
+                </h2>
+                <div id="RoleActeurOne" class="accordion-collapse collapse" aria-labelledby="headingRoleActeurOne" data-bs-parent="#accordionRoleActeur">
+                    <div class="accordion-body">
+                        <?php echo $role9->afficherActeurs(); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingRoleActeurTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#RoleActeurTwo" aria-expanded="false" aria-controls="RoleActeurTwo">
+                        Rôle #<?php echo $role2; ?> jouer par les acteurs
+                    </button>
+                </h2>
+                <div id="RoleActeurTwo" class="accordion-collapse collapse" aria-labelledby="headingRoleActeurTwo" data-bs-parent="#accordionRoleActeur">
+                    <div class="accordion-body">
+                        <?php echo $role2->afficherActeurs(); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-100"><br></div>
+    <div class="container w-50 p-3">
+        <h2>Genre de film</h2>
+        <div class="accordion" id="accordionGenre">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingGenreOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#GenreOne" aria-expanded="false" aria-controls="GenreOne">
+                        Le genre #<?php echo $genre7; ?> est associé au film
+                    </button>
+                </h2>
+                <div id="GenreOne" class="accordion-collapse collapse" aria-labelledby="headingGenreOne" data-bs-parent="#accordionGenre">
+                    <div class="accordion-body">
+                        <?php echo $genre7->afficherCinematographie(); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingGenreTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#GenreTwo" aria-expanded="false" aria-controls="GenreTwo">
+                        Le genre #<?php echo $genre4; ?> est associé au film
+                    </button>
+                </h2>
+                <div id="GenreTwo" class="accordion-collapse collapse" aria-labelledby="headingGenreTwo" data-bs-parent="#accordionGenre">
+                    <div class="accordion-body">
+                        <?php echo $genre4->afficherCinematographie(); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-100"><br></div>
+    <div class="container w-50 p-3">
+        <h2>Casting de film</h2>
+        <div class="accordion" id="accordionCasting">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingCastingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CastingOne" aria-expanded="false" aria-controls="CastingOne">
+                        Casting du film #<?php echo $film5; ?>
+                    </button>
+                </h2>
+                <div id="CastingOne" class="accordion-collapse collapse" aria-labelledby="headingCastingOne" data-bs-parent="#accordionCasting">
+                    <div class="accordion-body">
+                        <?php echo $film5->afficherCasting(); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingCastingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CastingTwo" aria-expanded="false" aria-controls="CastingTwo">
+                        Casting du film #<?php echo $film2; ?>
+                    </button>
+                </h2>
+                <div id="CastingTwo" class="accordion-collapse collapse" aria-labelledby="headingCastingTwo" data-bs-parent="#accordionCasting">
+                    <div class="accordion-body">
+                        <?php echo $film2->afficherCasting(); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 
 </html>

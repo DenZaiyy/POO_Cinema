@@ -84,10 +84,11 @@ class Film
     //Fonction qui va afficher quel acteur à jouer quel rôle par rapport au titre de film
     public function afficherCasting()
     {
-        echo "Dans le film : " . $this->getTitle();
+        echo "<ul>";
         foreach ($this->_castings as $casting) {
-            echo ", " . $casting->getRole() . " a été incarné par " . $casting->getActeur();
+            echo "<li><strong>" . $casting->getRole() . "</strong> a été incarné par <strong>" . $casting->getActeur() . "</strong></li>";
         }
+        echo "</ul>";
     }
 
     //Fonction qui va permettre d'afficher les détails du film pour la filmographie du réalisateur
