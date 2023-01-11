@@ -86,18 +86,6 @@ $cast12 = new Casting($film5, $act11, $role10);
 </head>
 
 <body class="bg-dark text-light">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        p {
-            margin: 0;
-            padding: 0;
-        }
-    </style>
     <div class="container w-50 p-3">
         <h2>Filmographie de Réalisateur</h2>
         <div class="accordion" id="accordionRealisateur">
